@@ -1,0 +1,31 @@
+# Environment files and secret API keys
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Git repositories nested inside project folders
+.git/
+
+# Build files
+dist/
+build/
+
+# Protect secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Exclude dependencies
+node_modules/
+
+# Exclude nested Git repositories
+.git/
+
+# Exclude build output
+dist/
+build/
+# Temporary Office lock files
+~$*

@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page: #f8fafc;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #f1f5f9;
+    --bg-surface-highlight: #e2e8f0;
+    --border-color: #e2e8f0;
+    --border-subtle: #cbd5e1;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    --accent-primary: #4f46e5;
+    --accent-primary-text: #ffffff;
+    --accent-secondary: #0284c7;
+    --accent-tertiary: #7c3aed;
+    --code-bg: #0f172a;
+    --code-text: #f8fafc;
+  }
+
+  .dark {
+    --bg-page: #0b1326;
+    --bg-surface: #131b2e;
+    --bg-surface-elevated: #171f33;
+    --bg-surface-highlight: #222a3d;
+    --border-color: #222a3d;
+    --border-subtle: #2d3449;
+    --text-primary: #dae2fd;
+    --text-secondary: #c7c4d7;
+    --text-muted: #908fa0;
+    --accent-primary: #8083ff;
+    --accent-primary-text: #0d0096;
+    --accent-secondary: #7bd0ff;
+    --accent-tertiary: #d0bcff;
+    --code-bg: #060e20;
+    --code-text: #dae2fd;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  /* Offset for fixed navigation header when jumping to anchor ids */
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+}
+
+/* Custom utility classes */
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
